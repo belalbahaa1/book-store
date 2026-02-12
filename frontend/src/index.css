@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-primary: #6366f1; /* Indigo 500 */
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #10b981; /* Emerald 500 */
+  --color-accent: #f43f5e; /* Rose 500 */
+
+  /* Surface & Background Colors */
+  --color-background: #0f172a; /* Slate 900 */
+  --color-surface: #1e293b; /* Slate 800 */
+  --color-surface-hover: #334155; /* Slate 700 */
+
+  /* Typography Colors */
+  --color-text-main: #f8fafc; /* Slate 50 */
+  --color-text-muted: #94a3b8; /* Slate 400 */
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text-main);
+    font-family:
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      Arial,
+      sans-serif;
+  }
+}
