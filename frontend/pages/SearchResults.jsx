@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import { useAuth } from "../src/auth/context";
 import SuccessModal from "../src/components/SuccessModal";
+import API_BASE_URL from "../src/config";
 
 const SearchResults = () => {
   const [searchParams] = useSearchParams();
@@ -17,7 +18,7 @@ const SearchResults = () => {
     const fetchBooks = async () => {
       setLoading(true);
       try {
-        const res = await fetch("http://localhost:3000/books/getBooks");
+        const res = await fetch(`${API_BASE_URL}/books/getBooks`);
         const data = await res.json();
 
         // Filter books by search query
@@ -49,7 +50,7 @@ const SearchResults = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/users/add-to-cart", {
+      const response = await fetch(`${API_BASE_URL}/users/add-to-cart`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -152,7 +153,7 @@ const SearchResults = () => {
                   <img
                     src={
                       book.coverImage
-                        ? `http://localhost:3000/images/${book.coverImage}`
+                        ? `${API_BASE_URL}/images/${book.coverImage}`
                         : "https://placehold.co/400"
                     }
                     alt={book.title}
