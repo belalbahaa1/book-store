@@ -10,8 +10,7 @@ app.use(cookieParser());
 connectDB();
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://book-store-wjp7.vercel.app",
-  "https://book-store-m3jr.vercel.app",
+  "https://book-store-84zn.vercel.app",
 ];
 
 app.use(
