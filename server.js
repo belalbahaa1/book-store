@@ -5,6 +5,7 @@ const dotenv = require("dotenv").config();
 const connectDB = require("./config/db.js");
 
 const cookieParser = require("cookie-parser");
+const path = require("path");
 
 app.use(cookieParser());
 connectDB();
@@ -33,7 +34,7 @@ app.use(express.json());
 app.use("/users", require("./routes/users.js"));
 app.use("/books", require("./routes/books.js"));
 app.use("/category", require("./routes/category.js"));
-app.use("/images", express.static("public/images"));
+app.use("/images", express.static(path.join(__dirname, "public/images")));
 app.use("/admin", require("./routes/admin.js"));
 
 // Export the app for Vercel
