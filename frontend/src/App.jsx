@@ -7,7 +7,7 @@ import AddBook from "./components/admin/AddBook";
 import AllBooks from "./components/admin/AllBooks";
 import Categories from "./components/admin/Categories";
 import Login from "../pages/Login";
-import Signup from "../pages/SignUp";
+import Signup from "../pages/Signup";
 import Cart from "../pages/Cart";
 import SearchResults from "../pages/SearchResults";
 import { AuthProvider } from "./auth/AuthContext";
